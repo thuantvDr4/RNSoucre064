@@ -7,7 +7,10 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "pod:update" : "cd ios && pod install --repo-update && cd ..",
+    "clean:android" : "cd android && ./gradlew cleanBuildCache && cd ../",
+    "clean:ios": "cd ios && xcodebuild clean && cd ../"
   },
   "dependencies": {
     "react": "17.0.1",
