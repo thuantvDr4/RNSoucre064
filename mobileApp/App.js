@@ -11,16 +11,17 @@ import {RootNav} from './src/navigation/rootNavigation';
 import {
     View,
 } from 'react-native';
-
+import {Provider} from 'react-redux';
+import store from './src/redux/store';
 
 
 const App = () => {
 
-  return (
-    <View style={{flex:1}}>
-      <RootNav/>
-    </View>
-  );
+    return (
+        <Provider store={store}>
+            <RootNav/>
+        </Provider>
+    );
 };
 
 
