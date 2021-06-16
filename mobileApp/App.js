@@ -13,13 +13,15 @@ import {
 } from 'react-native';
 import {Provider} from 'react-redux';
 import store from './src/redux/store';
-
+import { Provider as PaperProvider } from 'react-native-paper';
 
 const App = () => {
 
     return (
         <Provider store={store}>
-            <RootNav/>
+            <PaperProvider>
+                <RootNav/>
+            </PaperProvider>
         </Provider>
     );
 };
